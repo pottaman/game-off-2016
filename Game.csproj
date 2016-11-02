@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C9B1FDCF-6807-421C-BB24-06E697C8B961}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nirdala.GameOff2016</RootNamespace>
+    <AssemblyName>GameOff2016</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>DesktopGL</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>Output\Bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <BaseIntermediateOutputPath>Output\Obj</BaseIntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE;LINUX</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>Output\Bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <BaseIntermediateOutputPath>Output\Obj</BaseIntermediateOutputPath>
+    <DefineConstants>TRACE;LINUX</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Game.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.6.0.1060, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MonoGame.Framework.DesktopGL.3.6.0.1060-develop\lib\net40\MonoGame.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icon.ico" />
+    <EmbeddedResource Include="Icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb">
+    </MonoGameContentReference>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\SDL2.dll">
+      <Link>x86\SDL2.dll</Link>
+      <Visible>False</Visible>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\SDL2.dll">
+      <Link>x64\SDL2.dll</Link>
+      <Visible>False</Visible>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\soft_oal.dll">
+      <Link>x86\soft_oal.dll</Link>
+      <Visible>False</Visible>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\soft_oal.dll">
+      <Link>x64\soft_oal.dll</Link>
+      <Visible>False</Visible>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\libSDL2-2.0.so.0">
+      <Link>x86\libSDL2-2.0.so.0</Link>
+      <Visible>False</Visible>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\libSDL2-2.0.so.0">
+      <Link>x64\libSDL2-2.0.so.0</Link>
+      <Visible>False</Visible>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\libopenal.so.1">
+      <Link>x86\libopenal.so.1</Link>
+      <Visible>False</Visible>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\libopenal.so.1">
+      <Link>x64\libopenal.so.1</Link>
+      <Visible>False</Visible>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\libSDL2-2.0.0.dylib">
+      <Link>libSDL2-2.0.0.dylib</Link>
+      <Visible>False</Visible>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\libopenal.1.dylib">
+      <Link>libopenal.1.dylib</Link>
+      <Visible>False</Visible>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll.config">
+      <Link>MonoGame.Framework.dll.config</Link>
+      <Visible>False</Visible>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Vendor\Nez\DefaultContent\NezDefaultBMFont.xnb">
+      <Link>Content\nez\NezDefaultBMFont.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\textures\gooCursor.xnb">
+      <Link>Content\nez\textures\gooCursor.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\textures\heatDistortionNoise.xnb">
+      <Link>Content\nez\textures\heatDistortionNoise.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\Bevels.mgfxo">
+      <Link>Content\nez\effects\Bevels.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\BloomCombine.mgfxo">
+      <Link>Content\nez\effects\BloomCombine.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\BloomExtract.mgfxo">
+      <Link>Content\nez\effects\BloomExtract.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\Crosshatch.mgfxo">
+      <Link>Content\nez\effects\Crosshatch.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\Dots.mgfxo">
+      <Link>Content\nez\effects\Dots.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\GaussianBlur.mgfxo">
+      <Link>Content\nez\effects\GaussianBlur.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\Grayscale.mgfxo">
+      <Link>Content\nez\effects\Grayscale.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\HeatDistortion.mgfxo">
+      <Link>Content\nez\effects\HeatDistortion.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\Invert.mgfxo">
+      <Link>Content\nez\effects\Invert.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\MultiTexture.mgfxo">
+      <Link>Content\nez\effects\MultiTexture.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\MultiTextureOverlay.mgfxo">
+      <Link>Content\nez\effects\MultiTextureOverlay.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\Noise.mgfxo">
+      <Link>Content\nez\effects\Noise.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\Scanlines.mgfxo">
+      <Link>Content\nez\effects\Scanlines.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\SpriteBlinkEffect.mgfxo">
+      <Link>Content\nez\effects\SpriteBlinkEffect.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\SpriteEffect.mgfxo">
+      <Link>Content\nez\effects\SpriteEffect.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\Twist.mgfxo">
+      <Link>Content\nez\effects\Twist.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\Vignette.mgfxo">
+      <Link>Content\nez\effects\Vignette.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\transitions\Squares.mgfxo">
+      <Link>Content\nez\effects\transitions\Squares.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vendor\Nez\DefaultContent\effects\transitions\Wind.mgfxo">
+      <Link>Content\nez\effects\transitions\Wind.mgfxo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Vendor\Nez\Nez-PCL\Nez.csproj">
+      <Project>{60b7197d-d0d5-405c-90a2-a56903e9b039}</Project>
+      <Name>Nez</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\nez\effects\transitions\" />
+    <Folder Include="Content\nez\textures\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
