@@ -21,6 +21,7 @@
 bld/
 [Bb]in/
 [Oo]bj/
+Output/
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -240,3 +241,7 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+# OSX files
+.DS_Store
+._.DS_Store
