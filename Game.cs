@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using Nez;
 
 namespace Nirdala.GameOff2016 {
@@ -37,6 +38,15 @@ namespace Nirdala.GameOff2016 {
             Scene.setDefaultDesignResolution(WIDTH, HEIGHT, Scene.SceneResolutionPolicy.BestFit, BLEED_X, BLEED_Y);
 
             Core.scene = Scene.createWithDefaultRenderer(Color.Black);
+        }
+
+        protected override void Update(GameTime gameTime) {
+            base.Update(gameTime);
+
+            if (Input.isKeyPressed(Keys.F)) {
+                Screen.isBorderlessFullscreen = !Screen.isBorderlessFullscreen;
+                Screen.applyChanges();
+            }
         }
     }
 }
