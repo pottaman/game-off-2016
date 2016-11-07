@@ -119,6 +119,14 @@ namespace Nez
 			set { _graphicsManager.IsFullScreen = value; }
 		}
 
+        public static bool isBorderlessFullscreen 
+        {
+            get { return _graphicsManager.IsFullScreen && _graphicsManager.HardwareModeSwitch == false; }
+            set {
+                _graphicsManager.HardwareModeSwitch = !value;
+                _graphicsManager.IsFullScreen = value;
+            }
+        }
 
 		public static void applyChanges()
 		{
